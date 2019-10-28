@@ -88,3 +88,14 @@ middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
 // Contact //
 
+const contactTitle = document.querySelector('.contact h4')
+contactTitle.textContent = siteContent['contact']['contact-h4']
+
+const contactAddress = document.querySelector('.contact p:nth-of-type(1)')
+contactAddress.textContent = siteContent['contact']['address']
+
+const contactPhone = document.querySelector('.contact p:nth-of-type(2)')
+contactPhone.textContent = siteContent['contact']['phone']
+
+const contactEmail = document.querySelector('.contact p:nth-of-type(3)')
+contactEmail.textContent = siteContent['contact']['email']
