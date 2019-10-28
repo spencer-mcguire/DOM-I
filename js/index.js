@@ -44,14 +44,38 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 // logo.src = 'img/logo.png';
 
-let nav = document.querySelectorAll('a')
+let nav = document.querySelectorAll('nav a')
 nav[0].textContent = siteContent['nav']['nav-item-1'];
 nav[1].textContent = siteContent['nav']['nav-item-2'];
 nav[2].textContent = siteContent['nav']['nav-item-3'];
 nav[3].textContent = siteContent['nav']['nav-item-4'];
 nav[4].textContent = siteContent['nav']['nav-item-5'];
 nav[5].textContent = siteContent['nav']['nav-item-6'];
-// console.log(nav);
+
+let navBar = document.querySelector('nav')
+let item1 = document.createElement('a')
+item1.setAttribute('href', '#')
+item1.textContent = 'Blog'
+navBar.appendChild(item1)
+
+let item2 = document.createElement('a')
+item2.setAttribute('href', '#')
+item2.textContent = 'Store'
+navBar.prepend(item2)
+
+
+console.log(navBar)
+console.log(nav)
+
+const navColor= document.getElementsByTagName('a');
+
+Array.from(navColor).forEach(element => {
+
+  element.style.color = 'green';
+
+})
+
+// navBar.forEach(element => {element.style.color = 'green'});
 
 // CTA //
 
