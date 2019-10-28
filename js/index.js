@@ -44,7 +44,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 // logo.src = 'img/logo.png';
 
-let nav = document.querySelectorAll('nav a')
+let nav = document.querySelectorAll('a')
 nav[0].textContent = siteContent['nav']['nav-item-1'];
 nav[1].textContent = siteContent['nav']['nav-item-2'];
 nav[2].textContent = siteContent['nav']['nav-item-3'];
@@ -64,9 +64,6 @@ item2.textContent = 'Store'
 navBar.prepend(item2)
 
 
-console.log(navBar)
-console.log(nav)
-
 const navColor= document.getElementsByTagName('a');
 
 Array.from(navColor).forEach(element => {
@@ -75,12 +72,10 @@ Array.from(navColor).forEach(element => {
 
 })
 
-// navBar.forEach(element => {element.style.color = 'green'});
-
 // CTA //
 
 let title = document.querySelector('.cta-text h1');
-title.textContent = siteContent['cta']['h1'];
+title.innerHTML = siteContent['cta']['h1'].replace(/ /g, '<br>');
 // console.log(title)
 
 let button = document.querySelector('button');
@@ -115,8 +110,8 @@ middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 const contactTitle = document.querySelector('.contact h4')
 contactTitle.textContent = siteContent['contact']['contact-h4']
 
-const contactAddress = document.querySelector('.contact p:nth-of-type(1)')
-contactAddress.textContent = siteContent['contact']['address']
+let contactAddress = document.querySelector('.contact p:nth-of-type(1)')
+contactAddress.innerHTML = siteContent['contact']['address']
 
 const contactPhone = document.querySelector('.contact p:nth-of-type(2)')
 contactPhone.textContent = siteContent['contact']['phone']
@@ -124,6 +119,8 @@ contactPhone.textContent = siteContent['contact']['phone']
 const contactEmail = document.querySelector('.contact p:nth-of-type(3)')
 contactEmail.textContent = siteContent['contact']['email']
 
+//fix line break
+contactAddress.innerHTML = "123 Way 456 Street <br /> Somewhere, USA";
 // Footer //
 
 const footer = document.querySelector('footer p')
