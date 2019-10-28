@@ -37,6 +37,54 @@ const siteContent = {
   },
 };
 
+// Header //
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+// logo.src = 'img/logo.png';
+
+let nav = document.querySelectorAll('a')
+nav[0].textContent = siteContent['nav']['nav-item-1'];
+nav[1].textContent = siteContent['nav']['nav-item-2'];
+nav[2].textContent = siteContent['nav']['nav-item-3'];
+nav[3].textContent = siteContent['nav']['nav-item-4'];
+nav[4].textContent = siteContent['nav']['nav-item-5'];
+nav[5].textContent = siteContent['nav']['nav-item-6'];
+// console.log(nav);
+
+// CTA //
+
+let title = document.querySelector('.cta-text h1');
+title.textContent = siteContent['cta']['h1'];
+// console.log(title)
+
+let button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+
+let headerImg = document.getElementById('cta-img')
+headerImg.setAttribute('src', siteContent["cta"]['img-src'])
+// headerImg.src = 'img/header-img.png';
+
+// Main Content //
+
+let mainContentTitle = document.querySelectorAll('h4');
+mainContentTitle[0].textContent = siteContent['main-content']['features-h4'];
+mainContentTitle[1].textContent = siteContent['main-content']['about-h4'];
+mainContentTitle[2].textContent = siteContent['main-content']['services-h4'];
+mainContentTitle[3].textContent = siteContent['main-content']['product-h4'];
+mainContentTitle[4].textContent = siteContent['main-content']['vision-h4'];
+
+const mainContentPara = document.querySelectorAll('p')
+mainContentPara[0].textContent = siteContent['main-content']['features-content'];
+mainContentPara[1].textContent = siteContent['main-content']['about-content'];
+mainContentPara[2].textContent = siteContent['main-content']['services-content'];
+mainContentPara[3].textContent = siteContent['main-content']['product-content'];
+mainContentPara[4].textContent = siteContent['main-content']['vision-content'];
+
+let middleImg = document.getElementById('middle-img')
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+// middleImg.src = 'img/mid-page-accent.jpg'
+
+// Contact //
+
